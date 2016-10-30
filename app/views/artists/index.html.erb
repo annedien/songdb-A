@@ -1,0 +1,15 @@
+<h1>Artists</h1>
+
+<ul class="artists">
+  <% @artists.each do |artist| %>
+      <% @artist = artist %>
+      <li class="artist-box">
+        <% @artist.photos.each do |photo| %>
+            <%= link_to artist_path(artist.id) do %>
+                <%= image_tag photo.image, :class => "imagelink" %>
+                <div class="artist-name"><%= artist.name %></div>
+            <% end %>
+        <% end %>
+      </li>
+  <% end %>
+</ul>
