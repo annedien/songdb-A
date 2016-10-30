@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1 class="page-header"><%= @artist.name %></h1>
+
+    <% if notice.present? %>
+        <div class="alert alert-info" role="alert">
+          <%= notice %>
+        </div>
+    <% end %>
+
+    <p>songs: <% @artist.songs.each do |song| %>
+          <%= song.name %><br>
+      <% end %>
+    </p></br></br>
