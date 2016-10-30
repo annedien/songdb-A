@@ -8,7 +8,27 @@
         </div>
     <% end %>
 
-    <p>songs: <% @artist.songs.each do |song| %>
+    <p>songs:<br>
+      <% @artist.songs.each do |song| %>
           <%= song.name %><br>
       <% end %>
-    </p></br></br>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="well">
+    <h4>Add a new song for <%= @artist.name %></h4>
+    <%= render "songs/form" %>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="well">
+      <h4>Delete songs <%= @artist.name %></h4>
+      <%= render "songs/show" %>
+    </div>
+

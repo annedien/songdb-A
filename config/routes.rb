@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'artists#index'
 
   resources :artists do
+
   #filtering artists
     collection do
       get :order_by_name
@@ -10,7 +11,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :songs
+  resources :songs  do
+    get "delete"
+  end
+
+
   resources :photos
 
 
