@@ -8,4 +8,14 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  # filtering artists
+  def order_by_name
+    @artists = Artist.order_by_name
+    render action: :index
+  end
+
+  def order_by_date
+    @artists = Artist.order_by_date
+    render action: :index
+  end
 end

@@ -1,5 +1,8 @@
 <h1>Artists</h1>
 
+<div class="filter-items"><%= link_to "Order by Name", order_by_name_artists_path %></div>
+<div class="filter-items"><%= link_to "Order by Latest", order_by_date_artists_path %></div>
+
 <ul class="artists">
   <% @artists.each do |artist| %>
       <% @artist = artist %>
