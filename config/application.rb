@@ -16,5 +16,11 @@ module SongdbA
       ActiveRecord::Base.connection
     end
 
+    config.generators do |g|
+      g.javascript_engine = :js
+      g.stylesheet_engine = :scss
+      g.template_engine = :erb
+    end
+
   end
 end
