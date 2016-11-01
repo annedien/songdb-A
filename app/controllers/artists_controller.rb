@@ -19,5 +19,8 @@ class ArtistsController < ApplicationController
   def order_by_date
     @artists = Artist.order_by_date
     render action: :index
-  end
+  end #end filtering
+
+
+
 end
